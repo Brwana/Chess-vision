@@ -1,4 +1,18 @@
 button{
 width: 70px;
 height: 70px;
+border-color: black;
+}
+
+#button_content{
+    font-size: x-large;
+    text-align: center;
+    color: green;
+ 
+}
+#not_similar{
+    background-color: darkgreen;
+}
+#similar{
+background-color: bisque;
 }
