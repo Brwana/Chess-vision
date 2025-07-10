@@ -1,18 +1,26 @@
+body{
+    background-color: burlywood;
+}
+
 button{
 width: 70px;
 height: 70px;
 border-color: black;
+color: transparent;
+border-color:transparent;
 }
 
 #button_content{
     font-size: x-large;
     text-align: center;
-    color: green;
+    color: white;
+    display: none;
  
 }
-#not_similar{
+#different_color{
     background-color: darkgreen;
+    
 }
-#similar{
-background-color: bisque;
+#same_color{
+background-color: white;
 }
