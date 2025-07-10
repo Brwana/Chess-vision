@@ -1,5 +1,7 @@
 
 const container=document.createElement('div');
+     correct=0;
+     wrong=0;
 
 function createGrid(){
 for (i=8;i>=1;i--){
@@ -19,9 +21,13 @@ for (i=8;i>=1;i--){
 
     const content=document.getElementById("button_content");
 
+
     button.onclick=function (){
         
         const cell=document.getElementById("random_cell").textContent;
+        const score_R=document.getElementById("correct");
+        const score_W=document.getElementById("wrong");
+
         if(button.textContent==cell){
             content.textContent=button.textContent;
             content.style.display="block";
@@ -29,6 +35,8 @@ for (i=8;i>=1;i--){
             setTimeout(() => {
                 content.style.display="none";
             }, 1000);
+            correct=correct+1;
+   
         }
         else{
             content.textContent=button.textContent;
@@ -37,9 +45,13 @@ for (i=8;i>=1;i--){
             setTimeout(() => {
                 content.style.display="none";
             }, 1000);
-        }
+            wrong+=1;
 
-   
+        }
+          score_R.textContent=`${correct}`;
+          score_W.textContent=`${wrong}`;
+       createRandomcell();
+
    
 };
     container.appendChild(button);
@@ -60,6 +72,5 @@ const chars="abcdefgh";
 indexchar=Math.floor((Math.random()*8));
 num=Math.floor((Math.random()*8))+1;
 cellGenerated.textContent=`${chars.charAt(indexchar)}${num}`;
-document.getElementById("random_cell").appendChild(cellGenerated);
 }
     createRandomcell();

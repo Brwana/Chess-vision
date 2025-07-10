@@ -1,5 +1,5 @@
 body{
-    background-color: burlywood;
+    background-color: white;
 }
 
 button{
@@ -8,6 +8,29 @@ height: 70px;
 border-color: black;
 color: transparent;
 border-color:transparent;
+}
+h1{
+    text-align: center;
+    position: relative;  
+    /* padding: 5px; */
+}
+#random_cell{
+    font-size: larger;
+}
+#grid{
+    float: left;
+   
+}
+
+/* .float_right{
+    float: right;
+    padding: 10px;
+} */
+.float_left{
+    float: left;
+    text-align: center;
+    padding-left: 30px;
+
 }
 
 #button_content{
@@ -22,5 +45,11 @@ border-color:transparent;
     
 }
 #same_color{
-background-color: white;
+background-color: beige;
+}
+#correct{
+    color: green;
+}
+#wrong{
+    color: red;
 }
