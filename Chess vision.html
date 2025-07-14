@@ -1,110 +1,29 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Chess vision</title>
-<link rel="stylesheet" href="style.css">
+    <title>Chess vision</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<h1>Chess vision</h1>
+    <h1>Chess vision</h1>
 
-<div id="grid">
-    <p id="random_cell"></p>
-</div>
-<div class="float_left">
-<p style="color: green;">&#10004; Correct</p>  
-<p id="correct"> </p>
-<p style="color: red;">&#10006; Wrong</p> 
-<p id="wrong"> </p>
-<br>
-</div>
+    <div id="chessBoard">
+        <p id="random_coordinates"></p>
+    </div>
+    <div class="float_left">
+        <p class="correctAnswerColor">&#10004; Correct</p>
+        <p id="correctAnswersCount" class="correctAnswerColor"> </p>
+        <p class="wrongAnswerColor">&#10006; Wrong</p>
+        <p id="wrongAnswersCount" class="wrongAnswerColor"> </p>
+        <br>
+    </div>
 
-<p id="button_content"></p>
-<script src="script.js"></script>
-<!-- <table>
-    <tr>
-        <td><button>a1</button></td>
-         <td><button>a1</button></td>
-          <td><button>a1</button></td>
-           <td><button>a1</button></td>
-            <td><button>a1</button></td>
-             <td><button>a1</button></td>
-              <td><button>a1</button></td>
-               <td><button>a1</button></td>
-        </tr>
-    <tr>
-        <td><button>a1</button></td>
-         <td><button>a1</button></td>
-          <td><button>a1</button></td>
-           <td><button>a1</button></td>
-            <td><button>a1</button></td>
-             <td><button>a1</button></td>
-              <td><button>a1</button></td>
-               <td><button>a1</button></td>
-     </tr>
-         <tr>
-        <td><button>a1</button></td>
-         <td><button>a1</button></td>
-          <td><button>a1</button></td>
-           <td><button>a1</button></td>
-            <td><button>a1</button></td>
-             <td><button>a1</button></td>
-              <td><button>a1</button></td>
-               <td><button>a1</button></td>
-        </tr>
-         <tr>
-        <td><button>a1</button></td>
-         <td><button>a1</button></td>
-          <td><button>a1</button></td>
-           <td><button>a1</button></td>
-            <td><button>a1</button></td>
-             <td><button>a1</button></td>
-              <td><button>a1</button></td>
-               <td><button>a1</button></td>
-        </tr>
-            <tr>
-        <td><button>a1</button></td>
-         <td><button>a1</button></td>
-          <td><button>a1</button></td>
-           <td><button>a1</button></td>
-            <td><button>a1</button></td>
-             <td><button>a1</button></td>
-              <td><button>a1</button></td>
-               <td><button>a1</button></td>
-        </tr>
-            <tr>
-        <td><button>a1</button></td>
-         <td><button>a1</button></td>
-          <td><button>a1</button></td>
-           <td><button>a1</button></td>
-            <td><button>a1</button></td>
-             <td><button>a1</button></td>
-              <td><button>a1</button></td>
-               <td><button>a1</button></td>
-        </tr>
-            <tr>
-        <td><button>a1</button></td>
-         <td><button>a1</button></td>
-          <td><button>a1</button></td>
-           <td><button>a1</button></td>
-            <td><button>a1</button></td>
-             <td><button>a1</button></td>
-              <td><button>a1</button></td>
-               <td><button>a1</button></td>
-        </tr>
-            <tr>
-        <td><button>a1</button></td>
-         <td><button>a1</button></td>
-          <td><button>a1</button></td>
-           <td><button>a1</button></td>
-            <td><button>a1</button></td>
-             <td><button>a1</button></td>
-              <td><button>a1</button></td>
-               <td><button>a1</button></td>
-        </tr>
-
-    </table> -->
+    <p id="ClickedButtonCoordinates"></p>
+    <script src="script.js"></script>
 </body>
+
 </html>

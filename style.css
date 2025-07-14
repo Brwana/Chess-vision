@@ -1,55 +1,57 @@
-body{
+body {
     background-color: white;
 }
 
-button{
-width: 70px;
-height: 70px;
-border-color: black;
-color: transparent;
-border-color:transparent;
-}
-h1{
-    text-align: center;
-    position: relative;  
-    /* padding: 5px; */
-}
-#random_cell{
-    font-size: larger;
-}
-#grid{
-    float: left;
-   
+button {
+    width: 70px;
+    height: 70px;
+    border-color: black;
+    border-color: transparent;
 }
 
-/* .float_right{
-    float: right;
-    padding: 10px;
-} */
-.float_left{
+h1 {
+    text-align: center;
+    position: relative;
+}
+
+#random_coordinates {
+    font-size: larger;
+}
+
+#chessBoard {
+    float: left;
+
+}
+
+
+.float_left {
     float: left;
     text-align: center;
     padding-left: 30px;
 
 }
 
-#button_content{
+#ClickedButtonCoordinates {
     font-size: x-large;
     text-align: center;
     color: white;
     display: none;
- 
+
 }
-#different_color{
+
+.white {
+    background-color: beige;
+
+}
+
+.black {
     background-color: darkgreen;
-    
 }
-#same_color{
-background-color: beige;
-}
-#correct{
+
+.correctAnswerColor {
     color: green;
 }
-#wrong{
+
+.wrongAnswerColor {
     color: red;
 }
