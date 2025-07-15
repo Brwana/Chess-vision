@@ -1,80 +1,3 @@
-
-// const container = document.createElement('div');
-// correct = 0;
-// wrong = 0;
-
-// function createGrid() {
-//     for (i = 8; i >= 1; i--) {
-
-//         for (j = 'a'.charCodeAt(0); j <= 'h'.charCodeAt(0); j++) {
-
-//             const button = document.createElement('button');
-//             if (i % 2 == 0 && j % 2 == 0 || i % 2 != 0 && j % 2 != 0) {
-
-//                 button.id = "same_color";
-//             }
-//             else {
-//                 button.id = "different_color";
-//             }
-
-//             button.textContent = `${String.fromCharCode(j)}${i}`;
-
-//             const content = document.getElementById("button_content");
-
-
-//             button.onclick = function () {
-
-//                 const cell = document.getElementById("random_cell").textContent;
-//                 const score_R = document.getElementById("correct");
-//                 const score_W = document.getElementById("wrong");
-
-//                 if (button.textContent == cell) {
-//                     content.textContent = button.textContent;
-//                     content.style.display = "block";
-//                     content.style.color = "green";
-//                     setTimeout(() => {
-//                         content.style.display = "none";
-//                     }, 1000);
-//                     correct = correct + 1;
-
-//                 }
-//                 else {
-//                     content.textContent = button.textContent;
-//                     content.style.display = "block";
-//                     content.style.color = "red";
-//                     setTimeout(() => {
-//                         content.style.display = "none";
-//                     }, 1000);
-//                     wrong += 1;
-
-//                 }
-//                 score_R.textContent = `${correct}`;
-//                 score_W.textContent = `${wrong}`;
-//                 createRandomcell();
-
-
-//             };
-//             container.appendChild(button);
-//         }
-//         container.appendChild(document.createElement('br'));
-
-//     }
-//     document.getElementById("grid").appendChild(container);
-// }
-
-// createGrid();
-
-
-
-// function createRandomcell() {
-//     const cellGenerated = document.getElementById("random_cell");
-//     const chars = "abcdefgh";
-//     indexchar = Math.floor((Math.random() * 8));
-//     num = Math.floor((Math.random() * 8)) + 1;
-//     cellGenerated.textContent = `${chars.charAt(indexchar)}${num}`;
-// }
-// createRandomcell();
-
 //decleration of used global variables
 const chessBoard = document.getElementById("chessBoard");
 let correctAnswersCount = 0;
@@ -84,6 +7,7 @@ document.getElementById("wrongAnswersCount").textContent = `${wrongAnswersCount}
 let correctAnswers = [];
 let wrongAnswers = [];
 const charsOfChessBoardCoordinates = "abcdefgh";
+
 
 
 function createChessBoard() {
@@ -123,23 +47,29 @@ function createRandomCoordinates() {
     // return (charsOfChessBoardCoordinates.charAt(indexchar)+num);
 }
 
-// document.getElementById("random_coordinates").textContent=createRandomCoordinates();
 
 
-//This function compare the clicked button with the random coordinates 
-// generated and append the results in correct and wrong answers arraies
+
+/*This function compares the clicked button with the random coordinates- 
+ generated and append the results in correct and wrong answers arraies*/
+
 function handleButtonClick(event) {
-    const randomCoordinates = document.getElementById("random_coordinates").textContent;
-
+    let randomCoordinates = document.getElementById("random_coordinates").textContent;
+    // event.target => the clicked button
     if (event.target.id == randomCoordinates) {
-        correctAnswers.push(event.target.id);
+        var greenColoredCorrectAnswer = document.createElement('span'); //to display the correct answer in green color
+        greenColoredCorrectAnswer.classList.add('correctAnswerColor');
+        greenColoredCorrectAnswer.textContent = `${randomCoordinates}`;
+        document.getElementById("results").append(greenColoredCorrectAnswer, " ");
         document.getElementById("correctAnswersCount").textContent = `${correctAnswersCount += 1}`;
     }
     else {
-        wrongAnswers.push(event.target.id);
+        var redColoredWrongAnswer = document.createElement('span');// to display the wrong answer in red color
+        redColoredWrongAnswer.classList.add('wrongAnswerColor');
+        redColoredWrongAnswer.textContent = `${randomCoordinates}`;
+        document.getElementById("results").append(redColoredWrongAnswer, "  ");
         document.getElementById("wrongAnswersCount").textContent = `${wrongAnswersCount += 1}`;
     }
-    document.getElementById("ClickedButtonCoordinates").textContent = event.target.id;
     createRandomCoordinates();
 
 
