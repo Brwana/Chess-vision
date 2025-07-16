@@ -74,6 +74,39 @@ function handleButtonClick(event) {
 
 
 }
-// functions calling
-createChessBoard();
-createRandomCoordinates();
+
+function Timer(numberOfSeconds) {
+    // setInterval(myStopFunction,10000); /
+    const timer = setInterval(() => {
+        document.getElementById("countDown").textContent = `Timer: ${numberOfSeconds}`;
+        if (numberOfSeconds <= 0) {
+            clearInterval(timer);
+            myStopFunction();
+        }
+        else {
+            numberOfSeconds--;
+        }
+    }, 1000);
+
+}
+
+function playWithTimer() {
+    createChessBoard();
+    createRandomCoordinates();
+    Timer(10);
+}
+
+function myStopFunction() {
+    chessBoard.removeEventListener('click', handleButtonClick);
+    document.getElementById('overlay').style.display = 'flex';
+    document.getElementById('play_again').addEventListener('click', restart);
+
+
+}
+
+function restart() {
+    location.reload();
+}
+
+
+playWithTimer();

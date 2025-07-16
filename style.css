@@ -16,10 +16,15 @@ h1 {
 
 #random_coordinates {
     font-size: larger;
+    display: inline-block;
 }
 
 #chessBoard {
     float: left;
+    border-color: black;
+    border-radius: 2px;
+    padding: 2px;
+
 
 }
 
@@ -54,4 +59,28 @@ h1 {
 
 .wrongAnswerColor {
     color: red;
+}
+
+#overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.227);
+    margin: 250px;
+    flex-direction: column;
+
+}
+
+#play_again {
+    background-color: darkgreen;
+    width: 150px;
+    height: 70px;
+}
+
+#countDown {
+    display: inline-block;
+    padding-left: 200px;
+    font-size: larger;
+
 }
